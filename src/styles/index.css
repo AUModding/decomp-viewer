@@ -45,23 +45,39 @@ a {
 button {
     background-color: #a3d99f;
     color: #181818;
-    border: none;
+    border: 2px solid transparent;
     padding: 10px 20px;
     font-size: 1rem;
+    font-family: inherit;
     cursor: pointer;
     border-radius: 8px;
-    transition: background-color 0.2s ease, color 0.3s ease;
     margin: 10px;
+    transition: 
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+    
+}
+
+button:focus-visible {
+    outline: 2px solid aliceblue;
+    outline-offset: 2px;
 }
 
 button:hover {
     background-color: #4a8a3f;
-    color:aliceblue;
+    color: aliceblue;
 }
 
 button.secondary {
-    background-color: #a3d99f50;
-    color: aliceblue;
+    background-color: transparent;
+    color: #a3d99f;
+    border-color: #4a8a3f;
+}
+
+button.secondary:hover {
+    background-color: #a3d99f24;
+    border-color: #a3d99f;
 }
 
 .content {
